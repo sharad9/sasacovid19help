@@ -1,0 +1,233 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SASA COVID19 HELP</title>
+  <meta 
+  charset="utf-8"
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+  />
+  <link rel="icon"  href="https://www.dropbox.com/s/cykkyd6tff2mris/977ca459-101e-4ffc-87db-64d5449fed84.jpg?raw=1">
+  <title>Help Gorakhpur-Covid-19</title>
+  <meta charset="utf-8"/>
+  <meta name="discription" content="Together we can defeat this pandamic">
+  <meta name="author" content="Sharad">
+  <meta name="keywords" content="Gorakhpur-Covid-19">
+
+  <!--Latest Compiled And Minified CSS-->
+
+  
+  
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" type="text/css"
+  href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>  
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+
+
+  <style type="text/css">
+   
+
+    .item {
+      background: #333;
+      text-align: center;
+      height: 300px !important;
+    }
+
+    .carousel {
+      margin-top: 20px;
+    }
+
+    .bs-example {
+      margin: 20px;
+    }
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <!--===Header===-->
+
+  <header id="header" style="margin-top: 100px;">
+
+    
+
+
+   <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      
+     <ul class="nav nav-tabs" style="margin-top: 10px">
+
+
+
+       
+      <li id="homeli" ><a href="index.html#home" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1 icon-home' > Home</i></a></li>
+      <li id="plasmali"><a href="index.html#plasma" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-tint' > Plasma</i></a></li>
+      <li id="oxygenli"><a href="index.html#oxygen" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-air' > Oxygen</i></a></li>
+      <li id="resourcesli"><a href="index.html#resources" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-signal' > Resources</i></a></li>
+      
+
+    </ul>
+  </div>
+  <!-- Collection of nav links and other content for toggling -->
+  
+</nav>
+
+</header>
+<!--===Header End===-->
+
+
+
+<!-- ======= Services Section ======= -->
+<section style="padding: 10px 20px 20px 20px">
+ <div class="container">
+  <div >
+    <h3 style="text-align: center">SEARCH FOR COVID HELP RESOURCES</h3>
+  </div>
+  <div>
+    <div class="resources-text-form">
+      <h5 style="text-align: center; margin-top: 20px">Search your state / city and select from the given options.</h5>
+
+      <h6 style="text-align: center">
+        Find latest Resources in real Time on Twitter.
+      </h6>
+    </div>
+  </div>
+
+
+  
+  
+  <form style="padding: 10px 20px 20px 20px" action="oxygendatasheet.html" method="POST" class="resources-form-fields">
+    
+    <div class="form-group">
+     <span class="icon-stack"> <i
+      class="icon-check-empty icon-stack-base"></i> <i class="icon-search"></i>
+    </span>       
+
+    <label for="State" >Select State</label>
+
+    <select class="form-control state"  id="State" name="state" onchange="print_city('City', this.selectedIndex);" required>
+    </select>
+  </div>
+  <div class="form-group">
+   <span class="icon-stack"> <i
+    class="icon-check-empty icon-stack-base"></i> <i class="icon-search"></i>
+  </span> 
+  <label for="City">City</label>
+
+  <select class="form-control" id ="City" name="city" required>
+
+  </select>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="btn btn-primary" type="submit">Search</button>
+<button type="reset" class="btn btn-outline-primary" onclick="resetAll()">Clear</button>
+
+
+
+
+
+
+</form>
+</div>
+</section>
+
+
+<div  style="margin-top: 80px; margin-bottom: 56px;">
+  <h4 style="text-align: center;">CROWDSOURCED RESOURCES</h4>
+  <h6 style="text-align: center">Constatnly being added more information.</h6>
+  <div class="twitter-button-div" style="text-align: center;">
+    <a
+    href="#"
+    type="button"
+    class="btn btn-outline-success ui-button btn-md" 
+    >
+    Search Crowdsourced Resource
+  </a>
+</div>
+</div>
+
+
+<script src="cities.js"></script>
+<script language="javascript">
+  print_state("State");
+</script>
+
+<footer>
+  <nav role="navigation" class="navbar navbar-default ">
+    <div class="container">
+      <div class="footer-padding"></div>
+      <div class="footer">
+        <p >Made to help in INDIA | &copy; 2021</p>
+        <p >For Data Removal | Complaints : Email at sharad1910030@akgec.ac.in</p>
+        <p><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=sharad1910030@akgec.ac.in&tf=1
+          ">Send email</a></p>
+        
+      </div>
+    </div>
+    <!-- Collection of nav links and other content for toggling -->
+    
+  </nav>
+
+
+
+</footer>
+</center>
+
+</body>
+</html>
+
+
+
+

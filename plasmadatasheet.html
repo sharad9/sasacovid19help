@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta 
+  charset="utf-8"
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+  />
+  <link rel="icon"  href="https://www.dropbox.com/s/cykkyd6tff2mris/977ca459-101e-4ffc-87db-64d5449fed84.jpg?raw=1">
+  <title>Help Gorakhpur-Covid-19</title>
+  <meta charset="utf-8"/>
+  <meta name="discription" content="Together we can defeat this pandamic">
+  <meta name="author" content="Sharad">
+  <meta name="keywords" content="Gorakhpur-Covid-19">
+
+  <!--Latest Compiled And Minified CSS-->
+
+  
+  <script type='text/javascript'
+  src='https://code.jquery.com/jquery-1.10.1.js'></script>
+  <link rel="stylesheet" type="text/css"
+  href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <script type='text/javascript'
+  src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+  href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+
+</head>
+<body>
+ <header id="header" style="margin-top: 100px;">
+
+  
+
+
+   <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      
+     <ul class="nav nav-tabs" style="margin-top: 10px">
+
+
+
+      <li id="homeli" ><a href="index.html#home" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1 icon-home' > Home</i></a></li>
+      <li id="plasmali"><a href="index.html#plasma" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-tint' > Plasma</i></a></li>
+      <li id="oxygenli"><a href="index.html#oxygen" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-air' > Oxygen</i></a></li>
+      <li id="resourcesli"><a href="index.html#resources" class="btn btn-primary" style="margin:3px;"><i class='icon icon-1x icon-signal' > Resources</i></a></li>
+
+    </ul>
+  </div>
+  <!-- Collection of nav links and other content for toggling -->
+  
+</nav>
+
+</header>
+
+
+<table id="mt" class="table table-hover">
+  <caption><h2><b>Plasma Donor Information</b></h2></caption>
+  <thead>
+   <tr>
+    <th>Name </th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Blood </th>
+  </tr>
+</thead>
+<tbody>
+  
+</tbody>
+</table>
+
+<br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+<script type='text/javascript'>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyDWgsTxwU06aoZGfVDA0GWNfGKScoUWqrc",
+    authDomain: "sasacovid19help.firebaseapp.com",
+    databaseURL: "https://sasacovid19help-default-rtdb.firebaseio.com",
+    projectId: "sasacovid19help",
+    storageBucket: "sasacovid19help.appspot.com",
+    messagingSenderId: "557137923179",
+    appId: "1:557137923179:web:250b853a371979e568752e"
+  };
+  try {
+    firebase.initializeApp(firebaseConfig);
+  } catch (e) {
+    console.log("Error");
+  }  
+  var messagesRef = firebase.database().ref('plasmadatabase');
+
+
+
+  messagesRef.once('value').then((snapshot) => {
+   const data=snapshot.val();
+   if(!data) return;
+   Object.keys(snapshot.val()).forEach((key) => {
+
+
+    var row = $("<tr><td>"+snapshot.val()[key].name+"</td><td>"+snapshot.val()[key].email+"</td><td>"+snapshot.val()[key].phone+"</td><td>"+snapshot.val()[key].address+"</td><td>"+snapshot.val()[key].state+"</td><td>"+snapshot.val()[key].city+"</td><td>"+snapshot.val()[key].blood+"</td></tr>");
+
+
+    $("#mt > tbody").append(row);
+
+
+  });
+
+ });
+
+  
+</script>
+</body>
+</html>
+
+
+
